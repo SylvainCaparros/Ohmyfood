@@ -1,6 +1,6 @@
-.coucou{
-    color: blue;
-    &__titre{
-        background-color: grey;
-    }
-}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&family=Shrikhand&display=swap');
+@import "./Utils/variables";
+@import "./Components/police";
+
+@import "./Base/header";
+@import "./Base/core";
