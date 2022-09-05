@@ -3,7 +3,7 @@
   font-family: "Roboto", sans-serif;
 }
 
-.logo, h1, h2, h3, h4, .footer__logo {
+.logo, h1, h3, h4, .footer__logo {
   font-family: "Shrikhand", cursive, sans-serif;
 }
 
@@ -50,17 +50,12 @@
   margin: 20px 0 50px 0;
   padding: 20px 0 20px 0;
   color: #fff;
+  box-shadow: 3px 5px 6px rgb(210, 210, 210);
 }
 
 .fonction {
   padding: 30px 0 50px 0;
   margin-left: 20px;
-}
-.fonction__titre {
-  font-weight: 700;
-  font-size: 25px;
-  padding-top: 20px;
-  margin-bottom: 30px;
 }
 .fonction__line {
   display: flex;
@@ -109,7 +104,7 @@
 
 .restaurants {
   padding-left: 20px;
-  padding-top: 20px;
+  padding-top: 30px;
   background-color: #f5f5f5;
 }
 .restaurants__titre {
