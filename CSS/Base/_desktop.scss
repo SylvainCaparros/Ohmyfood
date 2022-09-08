@@ -1,0 +1,10 @@
+@media screen and (min-width: 992px) {
+    .fonction {
+        &__block {
+            gap: 15px;
+            &__line {
+                width: 30%;  
+            }
+        }
+    }
+}
