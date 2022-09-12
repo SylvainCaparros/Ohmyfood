@@ -6,3 +6,25 @@
     width: 200px;
     align-self: center;
 }
+
+.container__heart {
+    position: relative;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__1 {
+        position: absolute;
+    }
+    &__2 {
+        opacity: 0;
+        transition: all 400ms;
+        position: absolute;
+        background: linear-gradient(170deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 100%);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        &:hover {
+            opacity: 1;
+        }
+    }
+}

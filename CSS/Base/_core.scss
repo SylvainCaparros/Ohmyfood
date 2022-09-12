@@ -145,25 +145,15 @@ a {
             }
             &__description {
                 display: flex;
-                margin-top: 30px;
+                margin-top: 10px;
                 margin-left: 10px;
                 &__txt {
-                    margin-top: -15px;
+                    width: 70%;
                    &__line1 {
                     margin-bottom: 5px;
                     font-weight: 600;
                    }
                 }
-                &__heart {
-                    display: flex;
-                    position: absolute;
-                    right: 50px;
-                    &--hover {
-                        background-clip: text;
-                        color: transparent;
-                        background: linear-gradient(170deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 100%);
-                    }
-                }
             }
         }
     }
@@ -171,39 +161,14 @@ a {
 
 
 
-
-.footer {
-    background-color: lighten(black, 20%);
-    color: #fff;
-    padding-bottom: 10px;
-    &__logo {
-        margin-left: 20px;
-        padding-top: 20px;
-    }
-    &__puces {
-        display: flex;
-        flex-direction: column;
-        list-style-type: none;
-        padding-left: 20px;
-        &__list {
-            text-decoration: none;
-            color: #fff;
-            display: flex;
-            font-size: 14px;
-            padding-bottom: 5px;
-            display: flex;
-            gap: 10px;
-            align-items: center;
-            &__icon {
-                width: 10px;
-                font-size: 10px;
-            }
-            a {
-                color: #fff;
-                &:hover {
-                    color: $color-primary;
-                }
-            }
-        }
+.page1img {
+    &__img {
+        width: 100%;
+        object-fit: contain;
     }
 }
+
+.page1menu__titre {
+    display: flex;
+}
+

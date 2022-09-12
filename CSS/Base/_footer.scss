@@ -1,0 +1,35 @@
+.footer {
+    background-color: lighten(black, 20%);
+    color: #fff;
+    padding-bottom: 10px;
+    &__logo {
+        margin-left: 20px;
+        padding-top: 20px;
+    }
+    &__puces {
+        display: flex;
+        flex-direction: column;
+        list-style-type: none;
+        padding-left: 20px;
+        &__list {
+            text-decoration: none;
+            color: #fff;
+            display: flex;
+            font-size: 14px;
+            padding-bottom: 5px;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            &__icon {
+                width: 10px;
+                font-size: 10px;
+            }
+            a {
+                color: #fff;
+                &:hover {
+                    color: $color-primary;
+                }
+            }
+        }
+    }
+}

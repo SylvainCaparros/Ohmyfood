@@ -1,3 +1,24 @@
+.header {
+    position: relative;
+    height: 75px;
+    &__return {
+        position: absolute;
+        top: 50%;
+        left: 25px;
+        transform: translate(-50%,-50%);
+        width: 15px;
+        height: 15px;
+        z-index: 2;
+    }
+    .fa-arrow-left {
+
+    }
+}
+
+.header {
+    
+}
+
 .logo {
     display: flex;
     justify-content: center;
@@ -5,3 +26,4 @@
     box-shadow: 0 2px 4px lightgray;
     position: relative;
 }
+
