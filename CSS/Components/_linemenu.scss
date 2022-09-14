@@ -1,0 +1,53 @@
+.menu {
+    &__underling {
+        margin-top: -12px;
+        width: 50px;
+        height: 3px;
+        background-color: $color-tertiary;
+    }
+    &__line {
+        display: flex;
+        margin-top: 20px;
+        background-color: #fff;
+        border-radius: 20px;
+        box-shadow: 3px 5px 6px rgb(210, 210, 210);
+        margin-right: 20px;
+        &__txt {
+            padding: 15px;
+            width: 70%;
+            &__1 {
+                font-weight: 600;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            &__2 {
+                margin-top: 5px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+        &__price {
+            padding: 15px;
+            display: flex;
+            font-weight: 600;
+            align-items: flex-end;
+            justify-content: center;
+            flex-grow: 1;
+        }
+        &__validation {
+            display: flex;
+            flex-grow: 1;
+            border-bottom-right-radius: 20px;
+            border-top-right-radius: 20px;
+            overflow: visible;
+            background-color: $color-tertiary;
+            justify-content: center;
+            align-items: center;
+            .fa-circle-check {
+                color: #fff;
+            }
+        }
+    }
+}

@@ -159,16 +159,28 @@ a {
     }
 }
 
-
-
-.page1img {
+.pagesimg {
     &__img {
         width: 100%;
         object-fit: contain;
     }
 }
 
-.page1menu__titre {
-    display: flex;
+.pagesmenu {
+    background-color: #f2f2f2;
+    position: relative;
+    margin-top: -50px;
+    padding: 15px 0 10px 20px;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    &__titre {
+        h1 {
+            width: 70%;
+        }
+        display: flex;
+    }
+    h2 {
+        font-weight: 300;
+        font-size: 20px;
+    }
 }
-
