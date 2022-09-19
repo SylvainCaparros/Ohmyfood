@@ -40,13 +40,6 @@ a {
         color: #787878;
         font-size: 18px;
     }
-    &__line3 {
-        margin: 20px 0 50px 0;
-        padding: 20px 0 20px 0;
-        color: #fff;
-        box-shadow: 3px 5px 6px rgb(210, 210, 210);
-        cursor: pointer;
-    }
 }
 
 .fonction {
@@ -99,6 +92,18 @@ a {
                     font-size: 12px;
                 }
             } 
+        }
+        @media screen and (min-width: 768px) {
+            justify-content: center;
+            &__line {
+                width: 50%;
+            }
+        }
+        @media screen and (min-width: 992px) {
+            gap: 15px;
+            &__line {
+                width: 30%;  
+            }
         }
     }
 }
@@ -153,6 +158,16 @@ a {
                     margin-bottom: 5px;
                     font-weight: 600;
                    }
+                }
+            }
+        }
+        @media screen and (min-width: 768px) {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2%;
+            &__link {
+                @media screen and (min-width: 768px) {
+                    width: 49%;
                 }
             }
         }

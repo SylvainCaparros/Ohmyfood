@@ -71,13 +71,6 @@ a {
   color: #787878;
   font-size: 18px;
 }
-.presentation__line3 {
-  margin: 20px 0 50px 0;
-  padding: 20px 0 20px 0;
-  color: #fff;
-  box-shadow: 3px 5px 6px rgb(210, 210, 210);
-  cursor: pointer;
-}
 
 .fonction {
   padding: 30px 0 50px 0;
@@ -131,6 +124,22 @@ a {
   display: flex;
   align-items: center;
   font-size: 12px;
+}
+@media screen and (min-width: 768px) {
+  .fonction__block {
+    justify-content: center;
+  }
+  .fonction__block__line {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .fonction__block {
+    gap: 15px;
+  }
+  .fonction__block__line {
+    width: 30%;
+  }
 }
 
 .restaurants {
@@ -187,6 +196,18 @@ a {
 .restaurants__list__cards__description__txt__line1 {
   margin-bottom: 5px;
   font-weight: 600;
+}
+@media screen and (min-width: 768px) {
+  .restaurants__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2%;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 768px) {
+  .restaurants__list__link {
+    width: 49%;
+  }
 }
 
 .pagesimg__img {
@@ -249,14 +270,33 @@ a {
 .footer__puces__list a:hover {
   color: #9356DC;
 }
+@media screen and (min-width: 768px) {
+  .footer__puces {
+    flex-direction: row;
+  }
+  .footer__puces__list {
+    width: 25%;
+  }
+}
 
 .btn {
+  display: flex;
+  margin: 20px 0 50px 0;
+  padding: 15px 0 15px 0;
+  color: #fff;
+  box-shadow: 3px 5px 6px rgb(210, 210, 210);
+  cursor: pointer;
   background: linear-gradient(170deg, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 100%);
-  padding-left: 10px;
-  padding-right: 10px;
   border-radius: 30px;
   width: 200px;
   align-self: center;
+  justify-content: center;
+}
+
+.bouton {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
 }
 
 .container__heart {
@@ -282,37 +322,7 @@ a {
   opacity: 1;
 }
 
-@media screen and (min-width: 768px) {
-  .restaurants__list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2%;
-  }
-  .restaurants__list__link {
-    width: 49%;
-  }
-  .fonction__block {
-    justify-content: center;
-  }
-  .fonction__block__line {
-    width: 50%;
-  }
-  .footer__puces {
-    flex-direction: row;
-  }
-  .footer__puces__list {
-    width: 25%;
-  }
-}
-@media screen and (min-width: 992px) {
-  .fonction__block {
-    gap: 15px;
-  }
-  .fonction__block__line {
-    width: 30%;
-  }
-}
-.menu__underling {
+.menu__underline {
   margin-top: -12px;
   width: 50px;
   height: 3px;
