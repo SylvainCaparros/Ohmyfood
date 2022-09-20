@@ -10,6 +10,10 @@
     width: 200px;
     align-self: center;
     justify-content: center;
+    &:hover {
+        background: linear-gradient(170deg, lighten(rgba(255,121,218,1), 5%) 0%, lighten(rgba(147,86,220,1), 5%) 100%);
+        box-shadow: 5px 7px 8px rgb(210, 210, 210);
+    }
 }
 .bouton {
     display: flex;
@@ -19,7 +23,7 @@
 
 .container__heart {
     position: relative;
-    width: 30%;
+    width: 100px;
     display: flex;
     justify-content: center;
     align-items: center;

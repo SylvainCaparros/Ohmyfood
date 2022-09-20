@@ -6,6 +6,13 @@
         background-color: $color-tertiary;
     }
     &__line {
+        &:hover {
+            .menu__line__validation {
+                width: 75px;
+                min-width: 75px;
+                transition: all 400ms;
+            }
+        }
         display: flex;
         margin-top: 20px;
         background-color: #fff;
@@ -14,7 +21,8 @@
         margin-right: 20px;
         &__txt {
             padding: 15px;
-            width: 70%;
+            flex-grow: 1;
+            overflow: hidden;
             &__1 {
                 font-weight: 600;
                 white-space: nowrap;
@@ -29,19 +37,21 @@
             }
         }
         &__price {
-            padding: 15px;
+            padding-bottom: 15px;
             display: flex;
             font-weight: 600;
             align-items: flex-end;
             justify-content: center;
-            flex-grow: 1;
+            width: 75px;
+            min-width: 75px;
         }
         &__validation {
             display: flex;
-            flex-grow: 1;
+            width: 0;
+            min-width: 0;
             border-bottom-right-radius: 20px;
             border-top-right-radius: 20px;
-            overflow: visible;
+            overflow: hidden;
             background-color: $color-tertiary;
             justify-content: center;
             align-items: center;
@@ -49,5 +59,6 @@
                 color: #fff;
             }
         }
+
     }
 }
