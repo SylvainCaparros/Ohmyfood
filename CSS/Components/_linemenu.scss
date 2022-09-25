@@ -1,4 +1,5 @@
 .menu {
+    margin-top: 40px;
     &__underline {
         margin-top: -12px;
         width: 50px;
@@ -11,12 +12,15 @@
                 width: 75px;
                 min-width: 75px;
                 transition: all 400ms;
+                &__icon {
+                    animation: spin 300ms linear;
+                }
             }
         }
         display: flex;
         margin-top: 20px;
         background-color: #fff;
-        border-radius: 20px;
+        border-radius: 15px;
         box-shadow: 3px 5px 6px rgb(210, 210, 210);
         margin-right: 20px;
         &__txt {
@@ -24,12 +28,14 @@
             flex-grow: 1;
             overflow: hidden;
             &__1 {
+                font-size: 15px;
                 font-weight: 600;
                 white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis;
             }
             &__2 {
+                font-size: 13px;
                 margin-top: 5px;
                 white-space: nowrap;
                 overflow: hidden;
@@ -42,15 +48,15 @@
             font-weight: 600;
             align-items: flex-end;
             justify-content: center;
-            width: 75px;
-            min-width: 75px;
+            width: 65px;
+            min-width: 65px;
         }
         &__validation {
             display: flex;
             width: 0;
             min-width: 0;
-            border-bottom-right-radius: 20px;
-            border-top-right-radius: 20px;
+            border-bottom-right-radius: 15px;
+            border-top-right-radius: 15px;
             overflow: hidden;
             background-color: $color-tertiary;
             justify-content: center;
@@ -60,5 +66,14 @@
             }
         }
 
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
     }
 }

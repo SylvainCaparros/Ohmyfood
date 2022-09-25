@@ -240,6 +240,7 @@ a {
 }
 .pagesmenu__titre h1 {
   flex-grow: 1;
+  margin-bottom: unset;
 }
 .pagesmenu h2 {
   font-weight: 300;
@@ -337,6 +338,9 @@ a {
   opacity: 1;
 }
 
+.menu {
+  margin-top: 40px;
+}
 .menu__underline {
   margin-top: -12px;
   width: 50px;
@@ -347,7 +351,7 @@ a {
   display: flex;
   margin-top: 20px;
   background-color: #fff;
-  border-radius: 20px;
+  border-radius: 15px;
   box-shadow: 3px 5px 6px rgb(210, 210, 210);
   margin-right: 20px;
 }
@@ -356,18 +360,24 @@ a {
   min-width: 75px;
   transition: all 400ms;
 }
+.menu__line:hover .menu__line__validation__icon {
+  -webkit-animation: spin 300ms linear;
+          animation: spin 300ms linear;
+}
 .menu__line__txt {
   padding: 15px;
   flex-grow: 1;
   overflow: hidden;
 }
 .menu__line__txt__1 {
+  font-size: 15px;
   font-weight: 600;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 .menu__line__txt__2 {
+  font-size: 13px;
   margin-top: 5px;
   white-space: nowrap;
   overflow: hidden;
@@ -379,15 +389,15 @@ a {
   font-weight: 600;
   align-items: flex-end;
   justify-content: center;
-  width: 75px;
-  min-width: 75px;
+  width: 65px;
+  min-width: 65px;
 }
 .menu__line__validation {
   display: flex;
   width: 0;
   min-width: 0;
-  border-bottom-right-radius: 20px;
-  border-top-right-radius: 20px;
+  border-bottom-right-radius: 15px;
+  border-top-right-radius: 15px;
   overflow: hidden;
   background-color: #99E2D0;
   justify-content: center;
@@ -395,4 +405,22 @@ a {
 }
 .menu__line__validation .fa-circle-check {
   color: #fff;
+}
+
+@-webkit-keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }/*# sourceMappingURL=style.css.map */
