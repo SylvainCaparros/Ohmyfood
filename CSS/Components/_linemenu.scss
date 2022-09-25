@@ -23,6 +23,12 @@
         border-radius: 15px;
         box-shadow: 3px 5px 6px rgb(210, 210, 210);
         margin-right: 20px;
+        animation: appear $anim_dur backwards;
+        @for $i from 1 through $num_menu {
+            &--#{$i} {
+                animation-delay: $anim_delay * $i;
+            }
+        }
         &__txt {
             padding: 15px;
             flex-grow: 1;
@@ -66,14 +72,5 @@
             }
         }
 
-    }
-}
-
-@keyframes spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
     }
 }
