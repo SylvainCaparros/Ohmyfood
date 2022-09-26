@@ -9,9 +9,68 @@
 
 @keyframes appear {
     from {
-        transform: translateX(9999px);
+        transform: translateY(30px);
+        opacity: 0;
     }
     to {
-        transform: translateX(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes progressbar {
+    from {
+        transform: scaleX(0);
+    }
+    to {
+        transform: scaleX(1);
+        background-color: #fff;
+    }
+}
+
+@keyframes baropacity {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+        background-color: red;
+    }
+    60% {
+        transform: translateX(2%);
+    }
+    90% {
+        transform: translateX(2% * -1);
+    }
+    100% {
+        background-color: red;
+    }
+}
+
+@keyframes bubble {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes divopacity {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        z-index: -1;
+    }
+}
+
+@keyframes divoverflow {
+    from {
+        overflow-y: hidden;
+    }
+    to {
+        overflow-y: auto;
     }
 }

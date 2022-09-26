@@ -4,4 +4,7 @@ $color-tertiary: #99E2D0;
 
 $num_menu: 10;
 $anim_dur: 1000ms;
-$anim_delay: $anim_dur / $num_menu
+$anim_delay: $anim_dur / $num_menu ;
+
+$num_stack: 4;
+$stack_delay: 1500ms / $num_stack;

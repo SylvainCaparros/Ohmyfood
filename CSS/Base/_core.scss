@@ -10,6 +10,80 @@ a {
     color: black;
 }
 
+html {
+    overflow-y: hidden;
+    animation: divoverflow 0ms 3000ms forwards;
+}
+
+.body {
+    overflow-y: hidden;
+    position: relative;
+    animation: divoverflow 0ms 3000ms forwards;
+    &__blank {
+        animation: divopacity 250ms 3000ms forwards;
+        width: 100%;
+        height: 100vh;
+        background-color: #fff;
+        position: fixed;
+        z-index: 3;
+        .loading {
+            height: 650px;
+            display: flex;
+            justify-content: center;
+            position: relative;
+            &__icon {
+                height: 512px;
+                width: 512px;
+                margin-top: 80px;
+            }
+            &__stacks {
+                position: absolute;
+                top: 280px;
+                &__stack {
+                    margin-top: 1px;
+                    width: 80px;
+                    height: 20px;
+                    border: 2px solid black;
+                    background-color: $color-tertiary;
+                    &__color {
+                        width: 100%;
+                        height: 100%;
+                        animation: progressbar 0ms both;
+                        @for $i from 1 through $num_stack {
+                            &--#{$i} {
+                                animation-delay: $stack_delay * $i;
+                            }
+                        }
+                        &--4 {
+                            animation: baropacity 0ms 1500ms both;
+                        }
+                    }
+                }
+            }
+            &__cloud {
+                position: absolute;
+                display: flex;
+                margin-top: 20px;
+                padding-left: 220px;
+                opacity: 0;
+                animation: bubble 500ms 1800ms both;
+                &__all {
+                    overflow: visible;
+                    width: 150px;
+                    height: 120px;
+                }
+                &__logo {
+                    position: absolute;
+                    width: 80px;
+                    height: 20px;
+                    margin-left: 30px;
+                    margin-top: 35px;
+                }
+            }
+        }
+    }
+}
+
 .localisation {
     display: flex;
     justify-content: center;
@@ -187,9 +261,13 @@ a {
 }
 
 .pagesimg {
+    height: 250px;
     &__img {
         width: 100%;
-        object-fit: contain;
+        object-fit: cover;
+        &--position {
+            object-position: 0 -100px;
+        }
     }
 }
 
@@ -197,18 +275,23 @@ a {
     background-color: #f2f2f2;
     position: relative;
     margin-top: -50px;
-    padding: 15px 0 10px 20px;
+    padding: 15px 0 10px 0;
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
     &__titre {
+        margin-top: 20px;
         h1 {
             flex-grow: 1;
-            margin-bottom: unset;
+            margin: unset;
+            margin-left: 20px;
+            font-size: 25px;
         }
         display: flex;
     }
-    h2 {
-        font-weight: 300;
-        font-size: 20px;
+    .menu {
+        &__titre {
+            font-weight: 300;
+            font-size: 20px;
+        }
     }
 }

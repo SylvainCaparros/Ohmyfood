@@ -1,5 +1,5 @@
 .menu {
-    margin-top: 40px;
+    margin: 40px 20px 0 20px;
     &__underline {
         margin-top: -12px;
         width: 50px;
@@ -17,13 +17,14 @@
                 }
             }
         }
+        overflow: hidden;
         display: flex;
         margin-top: 20px;
         background-color: #fff;
         border-radius: 15px;
         box-shadow: 3px 5px 6px rgb(210, 210, 210);
-        margin-right: 20px;
-        animation: appear $anim_dur backwards;
+        opacity: 0;
+        animation: appear $anim_dur forwards;
         @for $i from 1 through $num_menu {
             &--#{$i} {
                 animation-delay: $anim_delay * $i;
@@ -34,6 +35,7 @@
             flex-grow: 1;
             overflow: hidden;
             &__1 {
+                margin: unset;
                 font-size: 15px;
                 font-weight: 600;
                 white-space: nowrap;
@@ -41,6 +43,7 @@
                 text-overflow: ellipsis;
             }
             &__2 {
+                margin: unset;
                 font-size: 13px;
                 margin-top: 5px;
                 white-space: nowrap;
@@ -49,6 +52,7 @@
             }
         }
         &__price {
+            margin: unset;
             padding-bottom: 15px;
             display: flex;
             font-weight: 600;
@@ -61,12 +65,11 @@
             display: flex;
             width: 0;
             min-width: 0;
-            border-bottom-right-radius: 15px;
-            border-top-right-radius: 15px;
             overflow: hidden;
             background-color: $color-tertiary;
             justify-content: center;
             align-items: center;
+            transition: all 400ms;
             .fa-circle-check {
                 color: #fff;
             }

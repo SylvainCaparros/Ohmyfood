@@ -41,6 +41,97 @@ a {
   color: black;
 }
 
+html {
+  overflow-y: hidden;
+  -webkit-animation: divoverflow 0ms 3000ms forwards;
+          animation: divoverflow 0ms 3000ms forwards;
+}
+
+.body {
+  overflow-y: hidden;
+  position: relative;
+  -webkit-animation: divoverflow 0ms 3000ms forwards;
+          animation: divoverflow 0ms 3000ms forwards;
+}
+.body__blank {
+  -webkit-animation: divopacity 250ms 3000ms forwards;
+          animation: divopacity 250ms 3000ms forwards;
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+  position: fixed;
+  z-index: 3;
+}
+.body__blank .loading {
+  height: 650px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.body__blank .loading__icon {
+  height: 512px;
+  width: 512px;
+  margin-top: 80px;
+}
+.body__blank .loading__stacks {
+  position: absolute;
+  top: 280px;
+}
+.body__blank .loading__stacks__stack {
+  margin-top: 1px;
+  width: 80px;
+  height: 20px;
+  border: 2px solid black;
+  background-color: #99E2D0;
+}
+.body__blank .loading__stacks__stack__color {
+  width: 100%;
+  height: 100%;
+  -webkit-animation: progressbar 0ms both;
+          animation: progressbar 0ms both;
+}
+.body__blank .loading__stacks__stack__color--1 {
+  -webkit-animation-delay: 375ms;
+          animation-delay: 375ms;
+}
+.body__blank .loading__stacks__stack__color--2 {
+  -webkit-animation-delay: 750ms;
+          animation-delay: 750ms;
+}
+.body__blank .loading__stacks__stack__color--3 {
+  -webkit-animation-delay: 1125ms;
+          animation-delay: 1125ms;
+}
+.body__blank .loading__stacks__stack__color--4 {
+  -webkit-animation-delay: 1500ms;
+          animation-delay: 1500ms;
+}
+.body__blank .loading__stacks__stack__color--4 {
+  -webkit-animation: baropacity 0ms 1500ms both;
+          animation: baropacity 0ms 1500ms both;
+}
+.body__blank .loading__cloud {
+  position: absolute;
+  display: flex;
+  margin-top: 20px;
+  padding-left: 220px;
+  opacity: 0;
+  -webkit-animation: bubble 500ms 1800ms both;
+          animation: bubble 500ms 1800ms both;
+}
+.body__blank .loading__cloud__all {
+  overflow: visible;
+  width: 150px;
+  height: 120px;
+}
+.body__blank .loading__cloud__logo {
+  position: absolute;
+  width: 80px;
+  height: 20px;
+  margin-left: 30px;
+  margin-top: 35px;
+}
+
 .localisation {
   display: flex;
   justify-content: center;
@@ -221,28 +312,38 @@ a {
   }
 }
 
+.pagesimg {
+  height: 250px;
+}
 .pagesimg__img {
   width: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.pagesimg__img--position {
+  -o-object-position: 0 -100px;
+     object-position: 0 -100px;
 }
 
 .pagesmenu {
   background-color: #f2f2f2;
   position: relative;
   margin-top: -50px;
-  padding: 15px 0 10px 20px;
+  padding: 15px 0 10px 0;
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
 }
 .pagesmenu__titre {
+  margin-top: 20px;
   display: flex;
 }
 .pagesmenu__titre h1 {
   flex-grow: 1;
-  margin-bottom: unset;
+  margin: unset;
+  margin-left: 20px;
+  font-size: 25px;
 }
-.pagesmenu h2 {
+.pagesmenu .menu__titre {
   font-weight: 300;
   font-size: 20px;
 }
@@ -253,6 +354,7 @@ a {
   padding-bottom: 10px;
 }
 .footer__logo {
+  font-size: 20px;
   margin-left: 20px;
   padding-top: 20px;
 }
@@ -292,6 +394,7 @@ a {
 }
 
 .btn {
+  border: unset;
   display: flex;
   margin: 20px 0 50px 0;
   padding: 15px 0 15px 0;
@@ -339,7 +442,7 @@ a {
 }
 
 .menu {
-  margin-top: 40px;
+  margin: 40px 20px 0 20px;
 }
 .menu__underline {
   margin-top: -12px;
@@ -348,14 +451,15 @@ a {
   background-color: #99E2D0;
 }
 .menu__line {
+  overflow: hidden;
   display: flex;
   margin-top: 20px;
   background-color: #fff;
   border-radius: 15px;
   box-shadow: 3px 5px 6px rgb(210, 210, 210);
-  margin-right: 20px;
-  -webkit-animation: appear 1000ms backwards;
-          animation: appear 1000ms backwards;
+  opacity: 0;
+  -webkit-animation: appear 1000ms forwards;
+          animation: appear 1000ms forwards;
 }
 .menu__line:hover .menu__line__validation {
   width: 75px;
@@ -412,6 +516,7 @@ a {
   overflow: hidden;
 }
 .menu__line__txt__1 {
+  margin: unset;
   font-size: 15px;
   font-weight: 600;
   white-space: nowrap;
@@ -419,6 +524,7 @@ a {
   text-overflow: ellipsis;
 }
 .menu__line__txt__2 {
+  margin: unset;
   font-size: 13px;
   margin-top: 5px;
   white-space: nowrap;
@@ -426,6 +532,7 @@ a {
   text-overflow: ellipsis;
 }
 .menu__line__price {
+  margin: unset;
   padding-bottom: 15px;
   display: flex;
   font-weight: 600;
@@ -438,12 +545,11 @@ a {
   display: flex;
   width: 0;
   min-width: 0;
-  border-bottom-right-radius: 15px;
-  border-top-right-radius: 15px;
   overflow: hidden;
   background-color: #99E2D0;
   justify-content: center;
   align-items: center;
+  transition: all 400ms;
 }
 .menu__line__validation .fa-circle-check {
   color: #fff;
@@ -468,17 +574,125 @@ a {
 }
 @-webkit-keyframes appear {
   from {
-    transform: translateX(9999px);
+    transform: translateY(30px);
+    opacity: 0;
   }
   to {
-    transform: translateX(0);
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 @keyframes appear {
   from {
-    transform: translateX(9999px);
+    transform: translateY(30px);
+    opacity: 0;
   }
   to {
-    transform: translateX(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes progressbar {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+    background-color: #fff;
+  }
+}
+@keyframes progressbar {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+    background-color: #fff;
+  }
+}
+@-webkit-keyframes baropacity {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    background-color: red;
+  }
+  60% {
+    transform: translateX(2%);
+  }
+  90% {
+    transform: translateX(-2%);
+  }
+  100% {
+    background-color: red;
+  }
+}
+@keyframes baropacity {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    background-color: red;
+  }
+  60% {
+    transform: translateX(2%);
+  }
+  90% {
+    transform: translateX(-2%);
+  }
+  100% {
+    background-color: red;
+  }
+}
+@-webkit-keyframes bubble {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes bubble {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes divopacity {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+@keyframes divopacity {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+@-webkit-keyframes divoverflow {
+  from {
+    overflow-y: hidden;
+  }
+  to {
+    overflow-y: auto;
+  }
+}
+@keyframes divoverflow {
+  from {
+    overflow-y: hidden;
+  }
+  to {
+    overflow-y: auto;
   }
 }/*# sourceMappingURL=style.css.map */
