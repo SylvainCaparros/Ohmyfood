@@ -314,6 +314,7 @@ html {
 
 .pagesimg {
   height: 250px;
+  overflow: hidden;
 }
 .pagesimg__img {
   width: 100%;
@@ -343,9 +344,35 @@ html {
   margin-left: 20px;
   font-size: 25px;
 }
+.pagesmenu .menu {
+  flex-wrap: wrap;
+}
 .pagesmenu .menu__titre {
+  position: relative;
   font-weight: 300;
   font-size: 20px;
+}
+.pagesmenu .menu__titre::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 50px;
+  background: #99E2D0;
+}
+.pagesmenu .menu h2 {
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .pagesmenu .menu__line {
+    width: 30%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .pagesmenu .menu {
+    display: flex;
+    gap: 2%;
+  }
 }
 
 .footer {
