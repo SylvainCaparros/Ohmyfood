@@ -208,7 +208,7 @@ html {
 .fonction__block__line .fa-store {
   color: #9356DC;
 }
-.fonction__block__line--active {
+.fonction__block__line:hover {
   background-color: #f2eafb;
 }
 .fonction__block__line__position {

@@ -159,7 +159,7 @@ html {
             .fa-store {
                 color: $color-primary;
             }
-            &--active {
+            &:hover {
                 background-color: lighten($color-primary, 35%);
             }
             &__position {
